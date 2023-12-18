@@ -37,125 +37,26 @@ nav a {
   font-weight: bolder;
 }
 
-footer {
-  background: #181616;
-  color: white;
-  min-height: 20rem;
+::-webkit-scrollbar {
+  width: 0.5rem;
 }
 
-@media screen and (width > 0) and (width < 576px) {
-  footer .redesSociales {
-    margin: 3rem 0;
-    row-gap: 3rem;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto auto;
-    justify-content: space-evenly;
-  }
-  footer .redesSociales i {
-    color: white;
-    font-size: 5rem;
-  }
-  footer .redesSociales i:hover {
-    color: #5991b0;
-  }
-  footer .info {
-    display: grid;
-    height: 5rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 3rem 1rem;
-  }
-}
-@media screen and (width >= 576px) {
-  footer .redesSociales {
-    margin: 3rem 0;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto auto auto auto auto;
-    justify-content: space-evenly;
-  }
-  footer .redesSociales i {
-    color: white;
-    font-size: 5rem;
-  }
-  footer .redesSociales i:hover {
-    color: #5991b0;
-  }
-  footer .info {
-    display: grid;
-    height: 5rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 1rem;
-  }
-}
-header {
-  background: #5991b0;
-  color: white;
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-@media screen and (width > 0px) and (width <= 576px) {
-  header {
-    display: grid;
-    padding: 1rem;
-    justify-content: center;
-  }
-  header .logo {
-    margin: 0 auto;
-    width: 50%;
-  }
-  header .logo img {
-    height: auto;
-    width: 100%;
-  }
-  header h1 {
-    text-align: center;
-    font-size: 2rem;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
 }
-@media screen and (width > 576px) and (width <= 768px) {
-  header {
-    display: grid;
-    padding: 1rem;
-    justify-content: center;
-  }
-  header .logo {
-    margin: 0 auto;
-    width: 50%;
-  }
-  header .logo img {
-    height: auto;
-    width: 100%;
-  }
-  header h1 {
-    text-align: center;
-    font-size: 3rem;
-  }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #727070;
 }
-@media screen and (width > 768px) {
-  header {
-    display: grid;
-    padding: 1rem;
-    justify-content: center;
-  }
-  header .logo {
-    margin: 0 auto;
-    width: 20%;
-  }
-  header .logo img {
-    height: auto;
-    width: 100%;
-  }
-  header h1 {
-    text-align: center;
-    font-size: 2rem;
-  }
-}
+
 main {
-  background: #444343;
+  background: #5991b0;
   color: #333333;
   min-height: 60rem;
 }
@@ -240,8 +141,62 @@ main .apartado:hover .contenido {
 @media screen and (width > 1200px) {
   main {
     display: grid;
-    width: 100%;
     margin: 0 auto;
+    width: 100%;
+  }
+  main .eleccionTorneo {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10rem auto 0 auto;
+    width: 50%;
+    /* width */
+    /* Track */
+    /* Handle */
+    /* Handle on hover */
+  }
+  main .eleccionTorneo ::-webkit-scrollbar {
+    width: 1rem;
+  }
+  main .eleccionTorneo ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  main .eleccionTorneo ::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: #66a3c0;
+  }
+  main .eleccionTorneo ::-webkit-scrollbar-thumb:hover {
+    background: white;
+  }
+  main .eleccionTorneo .torneos {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    max-height: 30rem;
+    overflow: auto;
+  }
+  main .eleccionTorneo .torneos a {
+    border: solid white;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: font-size 1s;
+    margin: 1rem 1rem;
+  }
+  main .eleccionTorneo .torneos a:hover {
+    position: relative;
+    font-size: 2.4rem;
+    transition: font-size 1s;
+  }
+  main .eleccionTorneo .imgDecoracion {
+    border-radius: 0.5rem;
+    width: 30rem;
+    max-height: 30rem;
+    overflow: hidden;
+  }
+  main .eleccionTorneo .imgDecoracion img {
+    width: 100%;
   }
   main .reglas {
     display: grid;
@@ -253,8 +208,76 @@ main .apartado:hover .contenido {
     background: #5991b0;
   }
 }
+header {
+  background: #5991b0;
+  color: white;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (width > 0px) and (width <= 576px) {
+  header {
+    display: grid;
+    padding: 1rem;
+    justify-content: center;
+  }
+  header .logo {
+    margin: 0 auto;
+    width: 50%;
+  }
+  header .logo img {
+    height: auto;
+    width: 100%;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+@media screen and (width > 576px) and (width <= 768px) {
+  header {
+    display: grid;
+    padding: 1rem;
+    justify-content: center;
+  }
+  header .logo {
+    margin: 0 auto;
+    width: 50%;
+  }
+  header .logo img {
+    height: auto;
+    width: 100%;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+@media screen and (width > 768px) {
+  header {
+    display: grid;
+    padding: 1rem;
+    justify-content: center;
+  }
+  header .logo {
+    margin: 0 auto;
+    width: 20%;
+  }
+  header .logo img {
+    height: auto;
+    width: 100%;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
 nav {
   background: #c71814;
+  position: sticky;
+  top: 0;
 }
 nav .links {
   display: grid;
@@ -266,14 +289,24 @@ nav a {
 nav a:hover {
   color: #bbb8b8;
 }
-nav .btnLinks {
+nav .scrollMenu {
   display: none;
 }
 
 @media screen and (width > 0) and (width < 768px) {
   nav {
-    position: sticky;
-    top: 0;
+    overflow: auto;
+  }
+  nav .scrollMenu {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  nav .scrollMenu a {
+    font-size: 1.5rem;
+    text-decoration: none;
   }
   nav .btnLinks {
     display: block;
@@ -311,11 +344,9 @@ nav .btnLinks {
   }
   nav .links {
     align-items: center;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: 3rem;
     padding: 1rem;
-    position: sticky;
-    top: 0;
     justify-content: center;
   }
   nav a {
@@ -324,13 +355,100 @@ nav .btnLinks {
     text-decoration: none;
   }
 }
-@keyframes slide {
-  from {
-    left: -500;
+footer {
+  background: #181616;
+  color: white;
+  min-height: 20rem;
+}
+
+@media screen and (width > 0) and (width < 576px) {
+  footer .redesSociales {
+    margin: 3rem 0;
+    row-gap: 3rem;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
   }
-  to {
-    left: 0;
+  footer .redesSociales i {
+    color: white;
+    font-size: 5rem;
   }
+  footer .redesSociales i:hover {
+    color: #5991b0;
+  }
+  footer .info {
+    display: grid;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+}
+@media screen and (width >= 576px) {
+  footer .redesSociales {
+    margin: 3rem 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-evenly;
+  }
+  footer .redesSociales i {
+    color: white;
+    font-size: 5rem;
+  }
+  footer .redesSociales i:hover {
+    color: #5991b0;
+  }
+  footer .info {
+    display: grid;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+form {
+  display: grid;
+  row-gap: 1rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+form label {
+  color: #333333;
+  text-align: center;
+  font-size: 3rem;
+}
+form select {
+  color: #333333;
+  background: #66a3c0;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+}
+form .submitBox {
+  display: flex;
+  justify-content: right;
+}
+form .submitBox .submit {
+  color: #333333;
+  border: none;
+  border-radius: 0.5rem;
+  background: #66a3c0;
+  font-size: 2rem;
+  padding: 1rem;
+  transition: font-size 0.33s, color 0.33s;
+  width: fit-content;
+}
+form .submitBox .submit:hover {
+  position: relative;
+  transition: font-size 0.33s, color 0.33s;
+  color: #21c260;
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

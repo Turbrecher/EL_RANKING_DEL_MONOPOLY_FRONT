@@ -6,8 +6,24 @@ $xl: 1200px
 $xxl: 1400px
 
 //ESTILO GENERAL PARA TODAS LAS PANTALLAS
+
+::-webkit-scrollbar
+  width: 0.5rem
+
+/* Track */
+::-webkit-scrollbar-track
+  background: transparent
+
+/* Handle */
+::-webkit-scrollbar-thumb
+  background: white
+
+::-webkit-scrollbar-thumb:hover
+  background: #727070
+
+
 main
-  background: #444343
+  background: #5991b0
   color: #333333
   min-height: 60rem
 
@@ -95,8 +111,67 @@ main
 @media screen and (width > $xl)
   main
     display: grid
-    width: 100%
     margin: 0 auto
+    width: 100%
+
+    .eleccionTorneo
+      display: grid
+      grid-template-columns: auto auto
+      margin: 10rem auto 0 auto
+      width: 50%
+
+      /* width */
+
+      ::-webkit-scrollbar
+        width: 1rem
+
+      /* Track */
+
+      ::-webkit-scrollbar-track
+        background: transparent
+
+      /* Handle */
+
+      ::-webkit-scrollbar-thumb
+        border-radius: 5rem
+        background: #66a3c0
+
+      /* Handle on hover */
+
+      ::-webkit-scrollbar-thumb:hover
+        background: white
+
+      .torneos
+        display: flex
+        justify-content: start
+        flex-direction: column
+        max-height: 30rem
+        overflow: auto
+
+        a
+          border: solid white
+          border-radius: 0.5rem
+          color: white
+          padding: 1rem
+          text-decoration: none
+          font-size: 2rem
+          transition: font-size 1s
+          margin: 1rem 1rem
+
+        a:hover
+          position: relative
+          font-size: 2.4rem
+          transition: font-size 1s
+
+
+      .imgDecoracion
+        border-radius: 0.5rem
+        width: 30rem
+        max-height: 30rem
+        overflow: hidden
+
+        img
+          width: 100%
 
 
     .reglas

@@ -4,3 +4,43 @@ $md: 768px
 $lg: 992px
 $xl: 1200px
 $xxl: 1400px
+
+form
+  display: grid
+  row-gap: 1rem
+  margin: 0 auto
+  padding: 1rem
+
+  label
+    color: #333333
+    text-align: center
+    font-size: 3rem
+
+  select
+    color: #333333
+    background: #66a3c0
+    border: none
+    border-radius: 0.5rem
+    font-size: 3rem
+    padding: 1rem
+    text-align: center
+
+  .submitBox
+    display: flex
+    justify-content: right
+
+    .submit
+      color: #333333
+      border: none
+      border-radius: 0.5rem
+      background: #66a3c0
+      font-size: 2rem
+      padding: 1rem
+      transition: font-size 0.33s, color 0.33s
+      width: fit-content
+
+    .submit:hover
+      position: relative
+      transition: font-size 0.33s, color 0.33s
+      color: #21c260
+      font-size: 3rem
