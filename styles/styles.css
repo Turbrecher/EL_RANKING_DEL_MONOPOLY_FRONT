@@ -37,177 +37,35 @@ nav a {
   font-weight: bolder;
 }
 
-::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: white;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #727070;
-}
-
 main {
+  display: grid;
+  grid-template-rows: fit-content(100%);
+  padding: 3rem 0;
   background: #5991b0;
   color: #333333;
-  min-height: 60rem;
+  min-height: 70rem;
 }
-main .apartado {
-  justify-content: center;
-  background: #66a3c0;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  min-height: 25rem;
+main div {
   height: fit-content;
-  max-height: 35rem;
 }
-main .apartado .contenido {
-  display: block;
-  opacity: 0;
-  overflow: hidden;
-  transition: height 0.5s ease-in-out;
-  height: 0;
+main ::-webkit-scrollbar {
+  width: 0.5rem;
 }
-main .apartado h1, main .apartado h2, main .apartado h3 {
-  margin-bottom: 1rem;
+main ::-webkit-scrollbar-track {
+  background: transparent;
 }
-main .apartado h1 {
+main ::-webkit-scrollbar-thumb {
+  background: white;
+}
+main ::-webkit-scrollbar-thumb:hover {
+  background: #727070;
+}
+main .titulo {
+  color: white;
+  padding: 1rem;
   text-align: center;
 }
-main .apartado h2 {
-  text-align: justify;
-}
-main .apartado:hover {
-  justify-content: center;
-}
-main .apartado:hover .contenido {
-  opacity: 100%;
-  transition: opacity 1s ease-in;
-  height: auto;
-}
 
-@media screen and (width > 0) and (width < 576px) {
-  main {
-    display: grid;
-  }
-  main .reglas {
-    display: grid;
-    padding: 2rem 0;
-    gap: 2rem;
-    grid-template-columns: 90%;
-    grid-template-rows: auto;
-    justify-content: center;
-    background: #5991b0;
-  }
-}
-@media screen and (width > 576px) and (width <= 768px) {
-  main {
-    display: grid;
-  }
-  main .reglas {
-    display: grid;
-    padding: 2rem 0;
-    gap: 2rem;
-    grid-template-columns: 75%;
-    grid-template-rows: auto;
-    justify-content: center;
-    background: #5991b0;
-  }
-}
-@media screen and (width > 768px) and (width < 1200px) {
-  main {
-    display: grid;
-  }
-  main .reglas {
-    display: grid;
-    padding: 2rem 0;
-    gap: 2rem;
-    grid-template-columns: 37.5% 37.5%;
-    grid-template-rows: auto;
-    justify-content: center;
-    background: #5991b0;
-  }
-}
-@media screen and (width > 1200px) {
-  main {
-    display: grid;
-    margin: 0 auto;
-    width: 100%;
-  }
-  main .eleccionTorneo {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 10rem auto 0 auto;
-    width: 50%;
-    /* width */
-    /* Track */
-    /* Handle */
-    /* Handle on hover */
-  }
-  main .eleccionTorneo ::-webkit-scrollbar {
-    width: 1rem;
-  }
-  main .eleccionTorneo ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  main .eleccionTorneo ::-webkit-scrollbar-thumb {
-    border-radius: 5rem;
-    background: #66a3c0;
-  }
-  main .eleccionTorneo ::-webkit-scrollbar-thumb:hover {
-    background: white;
-  }
-  main .eleccionTorneo .torneos {
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    max-height: 30rem;
-    overflow: auto;
-  }
-  main .eleccionTorneo .torneos a {
-    border: solid white;
-    border-radius: 0.5rem;
-    color: white;
-    padding: 1rem;
-    text-decoration: none;
-    font-size: 2rem;
-    transition: font-size 1s;
-    margin: 1rem 1rem;
-  }
-  main .eleccionTorneo .torneos a:hover {
-    position: relative;
-    font-size: 2.4rem;
-    transition: font-size 1s;
-  }
-  main .eleccionTorneo .imgDecoracion {
-    border-radius: 0.5rem;
-    width: 30rem;
-    max-height: 30rem;
-    overflow: hidden;
-  }
-  main .eleccionTorneo .imgDecoracion img {
-    width: 100%;
-  }
-  main .reglas {
-    display: grid;
-    padding: 2rem 0;
-    gap: 2rem;
-    grid-template-columns: 25% 25% 25%;
-    grid-template-rows: auto;
-    justify-content: center;
-    background: #5991b0;
-  }
-}
 header {
   background: #5991b0;
   color: white;
@@ -449,6 +307,285 @@ form .submitBox .submit:hover {
   transition: font-size 0.33s, color 0.33s;
   color: #21c260;
   font-size: 3rem;
+}
+
+table {
+  color: white;
+  border-collapse: collapse;
+  background: #5991b0;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
+table thead {
+  background: #c71814;
+}
+table thead th {
+  border: solid #cc6868;
+  padding: 1rem;
+}
+table tbody tr:nth-child(even) {
+  background: #66a3c0;
+}
+table tbody td {
+  border: solid #89bdd9;
+  padding: 1rem;
+}
+
+@media screen and (width < 768px) {
+  table {
+    width: 100%;
+  }
+}
+@media screen and (width > 0) and (width < 768px) {
+  .eleccionTorneo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    row-gap: 2rem;
+    justify-content: center;
+  }
+  .eleccionTorneo ::-webkit-scrollbar {
+    width: 1rem;
+  }
+  .eleccionTorneo ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .eleccionTorneo ::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: #66a3c0;
+  }
+  .eleccionTorneo ::-webkit-scrollbar-thumb:hover {
+    background: white;
+  }
+  .eleccionTorneo .torneos {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    max-height: 30rem;
+    overflow: auto;
+  }
+  .eleccionTorneo .torneos a {
+    border: solid white;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: font-size 1s;
+    margin: 1rem 1rem;
+  }
+  .eleccionTorneo .torneos a:hover {
+    position: relative;
+    font-size: 2.4rem;
+    transition: font-size 1s;
+  }
+  .eleccionTorneo .imgDecoracion {
+    width: 15rem;
+    max-height: 15rem;
+    overflow: hidden;
+  }
+  .eleccionTorneo .imgDecoracion img {
+    width: 100%;
+  }
+}
+@media screen and (width >= 768px) and (width < 1200px) {
+  .eleccionTorneo {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  .eleccionTorneo ::-webkit-scrollbar {
+    width: 1rem;
+  }
+  .eleccionTorneo ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .eleccionTorneo ::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: #66a3c0;
+  }
+  .eleccionTorneo ::-webkit-scrollbar-thumb:hover {
+    background: white;
+  }
+  .eleccionTorneo .torneos {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    max-height: 30rem;
+    overflow: auto;
+  }
+  .eleccionTorneo .torneos a {
+    border: solid white;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: font-size 0.33s, background-color 1s;
+    margin: 1rem 1rem;
+  }
+  .eleccionTorneo .torneos a:hover {
+    background: #66a3c0;
+    position: relative;
+    font-size: 2.4rem;
+    transition: font-size 0.33s, background-color 1s;
+  }
+  .eleccionTorneo .imgDecoracion {
+    border-radius: 0.5rem;
+    width: 30rem;
+    max-height: 30rem;
+    overflow: hidden;
+  }
+  .eleccionTorneo .imgDecoracion img {
+    width: 100%;
+  }
+}
+@media screen and (width >= 1200px) {
+  .eleccionTorneo {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  .eleccionTorneo ::-webkit-scrollbar {
+    width: 1rem;
+  }
+  .eleccionTorneo ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .eleccionTorneo ::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: #66a3c0;
+  }
+  .eleccionTorneo ::-webkit-scrollbar-thumb:hover {
+    background: white;
+  }
+  .eleccionTorneo .torneos {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    max-height: 30rem;
+    overflow: auto;
+  }
+  .eleccionTorneo .torneos a {
+    border: solid white;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: font-size 0.33s, background-color 1s;
+    margin: 1rem 1rem;
+  }
+  .eleccionTorneo .torneos a:hover {
+    background: #66a3c0;
+    position: relative;
+    font-size: 2.4rem;
+    transition: font-size 0.33s, background-color 1s;
+  }
+  .eleccionTorneo .imgDecoracion {
+    border-radius: 0.5rem;
+    width: 30rem;
+    max-height: 30rem;
+    overflow: hidden;
+  }
+  .eleccionTorneo .imgDecoracion img {
+    width: 100%;
+  }
+}
+.reglas .apartado {
+  justify-content: center;
+  background: #66a3c0;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  min-height: 25rem;
+  height: fit-content;
+  max-height: 35rem;
+}
+.reglas .apartado .contenido {
+  color: white;
+  display: block;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  height: 0;
+}
+.reglas .apartado h1, .reglas .apartado h2, .reglas .apartado h3 {
+  margin-bottom: 1rem;
+}
+.reglas .apartado h1 {
+  text-align: center;
+}
+.reglas .apartado h2 {
+  text-align: justify;
+}
+.reglas .apartado:hover {
+  justify-content: center;
+}
+.reglas .apartado:hover .contenido {
+  opacity: 100%;
+  transition: opacity 1s ease-in;
+  height: auto;
+}
+
+@media screen and (width > 0) and (width < 768px) {
+  .reglas {
+    display: grid;
+    padding: 2rem 0;
+    gap: 2rem;
+    grid-template-columns: 90%;
+    grid-template-rows: auto;
+    justify-content: center;
+    background: #5991b0;
+  }
+}
+@media screen and (width > 576px) and (width < 768px) {
+  .reglas {
+    display: grid;
+    padding: 2rem 0;
+    gap: 2rem;
+    grid-template-columns: 75%;
+    grid-template-rows: auto;
+    justify-content: center;
+    background: #5991b0;
+  }
+}
+@media screen and (width >= 768px) and (width < 1200px) {
+  .reglas {
+    display: grid;
+    padding: 2rem 0;
+    gap: 2rem;
+    grid-template-columns: 37.5% 37.5%;
+    grid-template-rows: auto;
+    justify-content: center;
+    background: #5991b0;
+  }
+}
+@media screen and (width >= 1200px) {
+  .reglas {
+    display: grid;
+    padding: 2rem 0;
+    gap: 2rem;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: auto;
+    justify-content: center;
+    background: #5991b0;
+  }
+}
+.puntuaciones {
+  display: grid;
+  justify-content: center;
+  max-width: 100%;
+}
+
+@media screen and (width > 0) and (width < 768px) {
+  .puntuaciones {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

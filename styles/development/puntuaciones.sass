@@ -1,0 +1,18 @@
+$xs: 0
+$sm: 576px
+$md: 768px
+$lg: 992px
+$xl: 1200px
+$xxl: 1400px
+
+.puntuaciones
+  display: grid
+  justify-content: center
+  max-width: 100%
+
+//ESTILO PARA PANTALLAS PEQUEÑAS
+@media screen and (width > $xs) and (width < $md)
+  .puntuaciones
+    display: block
+    width: 100%
+    overflow-x: auto
