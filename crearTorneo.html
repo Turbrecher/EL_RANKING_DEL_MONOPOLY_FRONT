@@ -1,67 +1,100 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="shortcut icon" href="images/logotipo.png" type="image/x-icon">
-  <script src="https://kit.fontawesome.com/50ec0b88b6.js" crossorigin="anonymous"></script>
-  <title>Crear Torneo Monopoly Competicion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="images/logotipo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/50ec0b88b6.js" crossorigin="anonymous"></script>
+    <title>Crear Torneo Monopoly Competicion</title>
 </head>
 <body>
 
 <div class="container">
 
-  <header>
-    <a href="index.html">
-      <div class="logo">
-        <img src="images/logotipo.png" alt="">
-      </div>
-      <h1>COMPETICION</h1>
-    </a>
-  </header>
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="images/logotipo.png" alt="">
+            </div>
+            <h1>COMPETICION</h1>
+        </a>
+    </header>
 
-  <nav>
+    <nav>
 
-    <div class="scrollMenu">
-      <a href="elegirTorneo.html">TABLA PUNTUACIONES</a>
-      <a href="crearPartida.html">CREAR PARTIDA</a>
-      <a href="crearTorneo.html">CREAR TORNEO</a>
-      <a href="crearJugador.html">CREAR JUGADOR</a>
-    </div>
+        <div class="scrollMenu">
+            <a href="elegirTorneo.html">TABLA PUNTUACIONES</a>
+            <a href="crearPartida.html">CREAR PARTIDA</a>
+            <a href="crearTorneo.html">CREAR TORNEO</a>
+            <a href="crearJugador.html">CREAR JUGADOR</a>
+        </div>
 
-    <div class="links" id="navLinks">
-      <a href="elegirTorneo.html">TABLA PUNTUACIONES</a>
-      <a href="crearPartida.html">CREAR PARTIDA</a>
-      <a href="crearTorneo.html">CREAR TORNEO</a>
-      <a href="crearJugador.html">CREAR JUGADOR</a>
-    </div>
+        <div class="links" id="navLinks">
+            <a href="elegirTorneo.html">TABLA PUNTUACIONES</a>
+            <a href="crearPartida.html">CREAR PARTIDA</a>
+            <a href="crearTorneo.html">CREAR TORNEO</a>
+            <a href="crearJugador.html">CREAR JUGADOR</a>
+        </div>
 
-  </nav>
+    </nav>
 
-  <main>
-    <div class="titulo">
-      <h1>Crear Torneo</h1>
-    </div>
-
-  </main>
+    <main>
+        <div class="titulo">
+            <h1>CREAR TORNEO</h1>
+        </div>
 
 
-  <footer>
-    <div class="redesSociales">
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-tiktok"></i>
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-linkedin"></i>
-    </div>
-    <div class="info">
-      <h3>2023. Monopoly Competición. Esta aplicación ha sido diseñada para uso exclusivamente personal.
-        Bajo ningun concepto se permite la venta o comercialización de dicho producto.</h3>
-    </div>
-  </footer>
+        <div class="crearTorneo">
+            <div class="imagenCrearTorneo">
+                <img src="images/imagen_crear_torneo.png" alt="">
+            </div>
+
+            <div class="formTorneo">
+                <form action="crearPartida.html">
+                    <div class="form-control">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="fInicio">Inicio</label>
+                        <input type="date" name="fInicio" id="fInicio">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="fFin">Fin</label>
+                        <input type="date" name="fFin" id="fFin">
+                    </div>
+
+                    <div class="submitBox">
+                        <input class="submit" type="submit" value="Crear Torneo">
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <div class="redesSociales">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="info">
+            <h3>2023. Monopoly Competición. Esta aplicación ha sido diseñada para uso exclusivamente personal.
+                Bajo ningun concepto se permite la venta o comercialización de dicho producto.</h3>
+        </div>
+    </footer>
 
 </div>
 

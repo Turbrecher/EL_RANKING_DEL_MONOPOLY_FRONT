@@ -43,7 +43,59 @@
 
     <main>
         <div class="titulo">
-            <h1>Crear Partida</h1>
+            <h1>CREAR PARTIDA</h1>
+        </div>
+
+        <div class="crearPartida">
+            <div class="imagenCrearPartida">
+                <img src="images/imagen_crear_partida.png" alt="">
+            </div>
+
+            <div class="formPartida">
+                <form action="posicionesPartida.html">
+                    <div class="form-control">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+
+
+                    <div class="form-control">
+                        <label for="nJugadores">Jugadores</label>
+                        <select name="nJugadores" id="nJugadores">
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="torneo">Torneo</label>
+                        <select name="torneo" id="torneo">
+                            <option value="1">Torneo 1</option>
+                            <option value="2">Torneo 2</option>
+                            <option value="3">Torneo 3</option>
+                            <option value="4">Torneo 4</option>
+                            <option value="5">Torneo 5</option>
+                            <option value="6">Torneo 6</option>
+                        </select>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="fInicio">Fecha</label>
+                        <input type="date" name="fInicio" id="fInicio">
+                    </div>
+
+                    <div class="submitBox">
+                        <input class="submit" type="submit" value="Siguiente paso">
+                    </div>
+
+
+                </form>
+            </div>
         </div>
 
     </main>
