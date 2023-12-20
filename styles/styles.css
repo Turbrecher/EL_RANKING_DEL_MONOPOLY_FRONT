@@ -685,14 +685,19 @@ table tbody td {
   align-items: center;
 }
 .crearJugador .formJugador {
-  width: 100%;
   display: grid;
+  grid-area: formJugador;
+  width: 100%;
+}
+.crearJugador .imagenCrearJugador {
+  grid-area: imgCrearJugador;
 }
 
 @media screen and (width > 0) and (width < 992px) {
   .crearJugador {
     grid-template-columns: auto;
     grid-template-rows: auto;
+    grid-template-areas: "imgCrearJugador" "formJugador";
   }
   .crearJugador .imagenCrearJugador {
     display: grid;
@@ -707,6 +712,7 @@ table tbody td {
 @media screen and (width > 992px) {
   .crearJugador {
     grid-template-columns: fit-content(100%) fit-content(100%);
+    grid-template-areas: "formJugador imgCrearJugador";
   }
   .crearJugador .imagenCrearJugador {
     display: grid;
@@ -722,6 +728,9 @@ table tbody td {
   display: grid;
   justify-content: center;
   align-items: center;
+}
+.crearTorneo .imagenCrearTorneo img {
+  width: 25rem;
 }
 .crearTorneo .formTorneo {
   width: 100%;
