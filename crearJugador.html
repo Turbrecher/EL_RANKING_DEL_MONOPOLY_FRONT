@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" href="images/logotipo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/50ec0b88b6.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/validarCreacionJugador.js"></script>
     <title>Crear Jugador Monopoly Competicion</title>
 </head>
 <body>
@@ -53,17 +54,20 @@
                 <form action="crearPartida.html">
                     <div class="form-control">
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre">
+                        <input autocomplete="off" type="text" name="nombre" id="nombre">
+                        <h3 class="error" id="errorNombre"></h3>
                     </div>
 
                     <div class="form-control">
-                        <label for="nombre">Apellidos</label>
-                        <input type="text" name="nombre" id="nombre">
+                        <label for="apellidos">Apellidos</label>
+                        <input autocomplete="off" type="text" name="apellidos" id="apellidos">
+                        <h3 class="error" id="errorApellidos"></h3>
                     </div>
 
                     <div class="form-control">
-                        <label for="nombre">Nick</label>
-                        <input type="text" name="nombre" id="nombre">
+                        <label for="nick">Nick</label>
+                        <input autocomplete="off" type="text" name="nick" id="nick">
+                        <h3 class="error" id="errorNick"></h3>
                     </div>
 
                     <div class="submitBox">

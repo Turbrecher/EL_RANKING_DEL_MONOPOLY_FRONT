@@ -11,21 +11,21 @@ let errorFechaFin = document.getElementById('errorFechaFin')
 document.addEventListener('submit', (e) => {
 
     if (!InputValidator.validarNombre(nombreTorneo.value)) {
-        errorNombre.innerHTML = 'Nombre no valido'
+        errorNombre.innerHTML = 'Nombre no valido.'
         e.preventDefault()
     } else {
         errorNombre.innerHTML = ''
     }
 
     if (!InputValidator.validarFecha(fechaInicio.value)) {
-        errorFechaInicio.innerHTML = 'Fecha no valida'
+        errorFechaInicio.innerHTML = 'Fecha no valida.'
         e.preventDefault()
     } else {
         errorFechaInicio.innerHTML = ''
     }
 
     if (!InputValidator.validarFecha(fechaFinal.value)) {
-        errorFechaFin.innerHTML = 'Fecha no valida'
+        errorFechaFin.innerHTML = 'Fecha no valida.'
         e.preventDefault()
     } else {
         errorFechaFin.innerHTML = ''
