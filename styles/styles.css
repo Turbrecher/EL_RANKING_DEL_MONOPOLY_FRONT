@@ -37,6 +37,10 @@ nav a {
   font-weight: bolder;
 }
 
+.error {
+  color: #c72929;
+}
+
 main {
   display: grid;
   grid-template-rows: fit-content(100%);
@@ -305,20 +309,20 @@ form .submitBox {
   justify-content: left;
 }
 form .submitBox .submit {
-  color: white;
+  color: #333333;
   border: none;
   border-radius: 0.5rem;
   background: #66a3c0;
   font-size: 2rem;
   padding: 1rem;
-  transition: font-size 0.33s, color 0.33s;
+  transition: background-color 0.33s, color 0.33s;
   width: fit-content;
 }
 form .submitBox .submit:hover {
+  background: #5cb85c;
+  color: white;
   position: relative;
-  transition: font-size 0.33s, color 0.33s;
-  color: #6fb95b;
-  font-size: 2.5rem;
+  transition: background-color 0.33s, color 0.33s;
 }
 
 @media screen and (width >= 0) and (width < 576px) {
@@ -350,8 +354,12 @@ table thead th {
 table tbody tr:nth-child(even) {
   background: #66a3c0;
 }
+table tbody tr {
+  transition: background-color 0.5s;
+}
 table tbody tr:hover {
-  background-color: #5c9f9f;
+  background-color: #434443;
+  transition: background-color 0.5s;
 }
 table tbody td {
   border: solid #89bdd9;
