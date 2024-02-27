@@ -5,6 +5,14 @@ $lg: 992px
 $xl: 1200px
 $xxl: 1400px
 
+@keyframes changeSize
+  0%
+    scale: 100%
+  50%
+    scale: 102%
+  100%
+    scale: 100%
+
 .crearJugador
   display: grid
   justify-content: center
@@ -17,6 +25,9 @@ $xxl: 1400px
 
   .imagenCrearJugador
     grid-area: imgCrearJugador
+    animation-name: changeSize
+    animation-duration: 2s
+    animation-iteration-count: infinite
 
 @media screen and (width > $xs) and (width < $lg)
   .crearJugador
@@ -32,7 +43,6 @@ $xxl: 1400px
 
       img
         width: 100%
-
 
 @media screen and (width > $lg)
   .crearJugador

@@ -5,11 +5,24 @@ $lg: 992px
 $xl: 1200px
 $xxl: 1400px
 
+@keyframes rotate
+  0%
+    -moz-transform: rotate(0deg)
+  50%
+    -moz-transform: rotate(180deg)
+  100%
+    -moz-transform: rotate(360deg)
+
 //ESTILO GENERAL PARA TODAS LAS PANTALLAS
 footer
   background: #181616
   color: white
   min-height: 20rem
+  .redesSociales
+    i
+      animation-name: rotate
+      animation-duration: 4s
+      animation-iteration-count: infinite
 
 @media screen and (width>$xs) and (width<$sm)
   footer

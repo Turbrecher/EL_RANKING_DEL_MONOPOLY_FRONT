@@ -5,6 +5,14 @@ $lg: 992px
 $xl: 1200px
 $xxl: 1400px
 
+@keyframes size-change
+  0%
+    scale: 100%
+  50%
+    scale: 110%
+  100%
+    scale: 100%
+
 //ESTILO GENERAL PARA TODAS LAS PANTALLAS
 header
   background: #5991b0
@@ -12,6 +20,10 @@ header
   a
     color: white
     text-decoration: none
+    h1
+      animation-name: size-change
+      animation-duration: 5s
+      animation-iteration-count: infinite
 
 //ESTILO PARA PANTALLAS EXTRA PEQUEÑAS
 @media screen and (width > $xs) and (width <= $sm)

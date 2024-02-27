@@ -5,14 +5,26 @@ $lg: 992px
 $xl: 1200px
 $xxl: 1400px
 
+@keyframes changeSize
+  0%
+    scale: 100%
+  50%
+    scale: 102%
+  100%
+    scale: 100%
+
 .crearTorneo
   display: grid
   justify-content: center
   align-items: center
 
   .imagenCrearTorneo
+    animation-name: changeSize
+    animation-duration: 2s
+    animation-iteration-count: infinite
     img
       width: 25rem
+
   .formTorneo
     width: 100%
     display: grid
@@ -28,7 +40,6 @@ $xxl: 1400px
       margin: 0 auto
       img
         width: 100%
-
 
 @media screen and (width > $lg)
   .crearTorneo
