@@ -5,10 +5,26 @@ $lg: 992px
 $xl: 1200px
 $xxl: 1400px
 
+@keyframes rotateCardHover
+  0%
+    -moz-transform: rotate(0deg)
+  100%
+    -moz-transform: rotate(360deg)
+
+@keyframes rotateCardUnhover
+  0%
+    -moz-transform: rotate(360deg)
+  100%
+    -moz-transform: rotate(0deg)
 
 //TODAS LAS PANTALLAS
 .reglas
   .apartado
+
+    animation-name: rotateCardUnhover
+    animation-duration: 2s
+    animation-iteration-count: 1
+
     justify-content: center
     background: #66a3c0
     border-radius: 0.5rem
@@ -18,6 +34,14 @@ $xxl: 1400px
     min-height: 25rem
     height: fit-content
     max-height: 35rem
+
+    .titulo
+      opacity: 100%
+      position: relative
+      transition: opacity 1s ease-in
+      i
+        font-size: 5rem
+        margin-bottom: 2rem
 
     .contenido
       color: white
@@ -39,12 +63,19 @@ $xxl: 1400px
 
   .apartado:hover
     justify-content: center
+    animation-name: rotateCardHover
+    animation-duration: 2s
+    animation-iteration-count: 1
+
+    .titulo
+      opacity: 0
+      display: none
+      transition: opacity 1s ease-in
 
     .contenido
       opacity: 100%
       transition: opacity 1s ease-in
       height: auto
-
 
 //ESTILO PARA PANTALLAS PEQUEÑAS
 @media screen and (width > $xs) and (width < $md)

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="images/logotipo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/50ec0b88b6.js" crossorigin="anonymous"></script>
+    <title>Versiones Monopoly Competicion</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <a href="index.html">
+                <div class="logo">
+                    <img src="images/logotipo.png" alt="">
+                </div>
+                <h1>COMPETICION</h1>
+            </a>
+        </header>
+
+        <nav>
+
+            <div class="scrollMenu">
+                <a href="elegirTorneo.html">TABLA PUNTUACIONES</a>
+                <a href="crearPartida.html">CREAR PARTIDA</a>
+                <a href="crearTorneo.html">CREAR TORNEO</a>
+                <a href="crearJugador.html">CREAR JUGADOR</a>
+                <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+                <a href="versiones.html">VERSIONES</a>
+            </div>
+
+            <div class="links" id="navLinks">
+                <a href="elegirTorneo.html">TABLA PUNTUACIONES</a>
+                <a href="crearPartida.html">CREAR PARTIDA</a>
+                <a href="crearTorneo.html">CREAR TORNEO</a>
+                <a href="crearJugador.html">CREAR JUGADOR</a>
+                <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+                <a href="versiones.html">VERSIONES</a>
+            </div>
+
+        </nav>
+
+        <main>
+
+
+            <!-- TITULO PAGINA -->
+            <h1 style="color: white;font-size: 5rem;text-align: center;">VERSIONES</h1>
+            <!-- CAROUSEL -->
+            <div class="carousel">
+
+                <div class="previous" id="previous">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+
+                <div class="imagenes">
+                    <div class="imgCarousel active">
+                        <img src="images/caja_original.png" alt="">
+                    </div>
+
+                    <div class="imgCarousel">
+                        <img src="images/caja_fortnite.png" alt="">
+                    </div>
+
+                    <div class="imgCarousel">
+                        <img src="images/caja_juego_tronos.png" alt="">
+                    </div>
+
+                    <div class="imgCarousel">
+                        <img src="images/caja_one_piece.png" alt="">
+                    </div>
+                </div>
+
+                <div class="next" id="next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+            <!-- FUNCIONAMIENTO DEL CAROUSEL -->
+            <script>
+                let previous = document.getElementById("previous")
+                let next = document.getElementById("next")
+                let imagenes = document.getElementsByClassName("imgCarousel")
+
+                previous.addEventListener("click", () => {
+                    for (let index = 0; index < imagenes.length; index++) {
+                        const element = imagenes[index];
+                        //Bajamos en 1 el indice.
+                        let nuevoIndice = index - 1
+                        if (nuevoIndice < 0) {
+                            nuevoIndice = (imagenes.length - 1)
+                        }
+
+                        //Cargamos la nueva imagen.
+                        if (element.className === "imgCarousel active") {
+                            element.className = "imgCarousel"
+                            imagenes[nuevoIndice].className = "imgCarousel active"
+                            break
+                        }
+
+                    }
+                })
+
+
+                next.addEventListener("click", () => {
+                    for (let index = 0; index < imagenes.length; index++) {
+                        const element = imagenes[index];
+                        //Bajamos en 1 el indice.
+                        let nuevoIndice = index + 1
+                        if (nuevoIndice > (imagenes.length-1)) {
+                            nuevoIndice = 0
+                        }
+
+                        //Cargamos la nueva imagen.
+                        if (element.className === "imgCarousel active") {
+                            element.className = "imgCarousel"
+                            imagenes[nuevoIndice].className = "imgCarousel active"
+                            break
+                        }
+
+                    }
+                })
+            </script>
+            <!-- FIN DEL FUNCIONAMIENTO DEL CAROUSEL -->
+
+
+
+        </main>
+
+
+        <footer>
+            <div class="redesSociales">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="info">
+                <h3>2023. Monopoly Competición. Esta aplicación ha sido diseñada para uso exclusivamente personal.
+                    Bajo ningun concepto se permite la venta o comercialización de dicho producto.</h3>
+            </div>
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>

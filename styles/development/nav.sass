@@ -4,9 +4,9 @@ $md: 768px
 $lg: 992px
 $xl: 1200px
 $xxl: 1400px
-
+    
 nav
-  background: #c71814
+  background: #c72929
   position: sticky
   top: 0
   z-index: 1//Para estar por encima de todo lo demas.
@@ -17,14 +17,24 @@ nav
 
   a
     color: white
+    border: solid transparent
+    border-radius: 1rem
+    padding: 0.5rem
+    position: relative
+    top: 0
+    transition-property: border, top
+    transition-duration: 0.5s, 0.5s
 
   a:hover
-    color: #bbb8b8
+    border: solid white
+    top: -5px 
+    transition-property: border, top
+    transition-duration: 0.5s, 0.5s
 
   .scrollMenu
     display: none
 
-@media screen and (width > $xs) and (width < $md)
+@media screen and (width > $xs) and (width < $lg)
   nav
     overflow: auto
 
@@ -67,14 +77,14 @@ nav
         margin: 1rem 0
         padding: 1rem
 
-@media screen and (width >= $md)
+@media screen and (width >= $lg)
   nav
     display: grid
     justify-content: center
 
     .links
       align-items: center
-      grid-template-columns: auto auto auto auto
+      grid-template-columns: repeat(6,auto)
       gap: 3rem
       padding: 1rem
       justify-content: center
